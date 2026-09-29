@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Karina Salma Rizkita - System & Business Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- PRELOADER / WELCOME INTRO SCREEN MINIMALIS -->
+    <div id="welcome-screen">
+        <div class="welcome-content">
+            <h1 class="welcome-text">WELCOME TO MY PORTFOLIO WEBSITE</h1>
+            <button type="button" class="btn-enter-portfolio" id="btnEnterPortfolio" onclick="enterPortfolio()">
+                Explore Portfolio <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- AURORA LED BACKGROUND BERGERAK -->
+    <div class="aurora-container">
+        <div class="aurora-blob aurora-blob-1"></div>
+        <div class="aurora-blob aurora-blob-2"></div>
+        <div class="aurora-blob aurora-blob-3"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">My<span>Portofolio</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active-nav">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#diagrams">Diagrams</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span class="badge auto-glow"><span class="led-dot"></span> AVAILABLE FOR WORK</span>
+            <h1>System & Business Analyst</h1>
+            <p class="hero-subtitle">System Analyst | Business Analyst</p>
+            <p class="hero-desc">
+                Lulusan Sistem Informasi dengan fokus pada analisis kebutuhan pengguna, pemodelan proses bisnis, dan perancangan solusi sistem informasi. Terbiasa menerjemahkan kebutuhan bisnis menjadi kebutuhan sistem yang terstruktur dan terdokumentasi.
+            </p>
+            <div class="hero-tech-tags">
+                <span class="tag-float f1">Visual Paradigm</span>
+                <span class="tag-float f2">Laravel</span>
+                <span class="tag-float f3">System Modeling</span>
+            </div>
+            <div class="hero-btns">
+                <a href="#about" class="btn-primary pulse-btn">↓ Explore my work below</a>
+            </div>
+        </div>
+
+        <!-- LANYARD REALISTIS DENGAN AYUNAN OTOMATIS & 3D FLIP -->
+        <div class="hero-lanyard-container">
+            <div class="lanyard-strap-assembly auto-sway-assembly">
+                <div class="lanyard-ribbon-solid">
+                    <div class="ribbon-inner-texture"></div>
+                </div>
+                <div class="lanyard-metal-clamp"></div>
+            </div>
+
+            <div class="lanyard-card-flipper auto-sway-card">
+                <div class="id-card-flip-inner">
+                    <!-- Sisi Depan: Foto Formal -->
+                    <div class="id-card-side card-front">
+                        <div class="id-card-top-slot"></div>
+                        <div class="id-card-photo">
+                            <img src="images/foto-formal.jpeg" alt="Karina Salma Formal">
+                            <div class="glare-effect-auto"></div>
+                        </div>
+                        <div class="id-card-name">Karina Salma</div>
+                        <div class="id-card-role">System Analyst</div>
+                    </div>
+                    <!-- Sisi Belakang: Foto Non-Formal -->
+                    <div class="id-card-side card-back">
+                        <div class="id-card-top-slot"></div>
+                        <div class="id-card-photo non-formal-photo">
+                            <img src="images/foto-nonformal.jpeg" onerror="this.src='images/foto-nonformal.jpg'" alt="Karina Salma Non-Formal">
+                            <div class="glare-effect-auto"></div>
+                        </div>
+                        <div class="id-card-name">Karina Salma</div>
+                        <div class="id-card-role creative-role">Another Side </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="about-grid-layout">
+            <div class="about-text-content">
+                <span class="section-tag">ABOUT ME</span>
+                <h2>KARINA SALMA RIZKITA</h2>
+                <p class="about-lead">
+                    Lulusan S1 Sistem Informasi <strong>Telkom University</strong> dengan fokus pada System Analysis, Business Analysis, dan pengembangan sistem informasi.
+                </p>
+                <p>
+                    Memiliki sertifikasi kompetensi <strong>System Analyst dari LSP Informatika</strong>. Terbiasa melakukan stakeholder interview, analisis kebutuhan pengguna, pemetaan proses bisnis, penyusunan dokumentasi kebutuhan, pemodelan UML dan BPMN, serta pengembangan dan pengujian aplikasi berbasis Laravel dan MySQL.
+                </p>
+                <p class="quote-text">"Turning complex business workflows into structured, seamless, and meaningful digital solutions."</p>
+            </div>
+            
+            <!-- ID CARD DENGAN EFEK 3D TILT MENGIKUTI CURSOR -->
+            <div class="about-photo-wrapper">
+                <div class="card-3d-tilt" id="tiltCard" onclick="openModal('images/foto-formal.jpeg')">
+                    <div class="card-3d-content">
+                        <div class="card-3d-header">
+                            <span class="card-chip"></span>
+                            <span class="card-id-no">LSP CERTIFIED</span>
+                        </div>
+                        <div class="card-3d-img">
+                            <img src="images/foto-formal.jpeg" alt="Karina Salma Rizkita">
+                        </div>
+                        <div class="card-3d-details">
+                            <h3>KARINA SALMA RIZKITA</h3>
+                            <p>System & Business Analyst</p>
+                            <span class="card-badge-verified"><i class="fas fa-check-circle"></i> LSP Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bento-stats-grid">
+            <div class="bento-stat-card">
+                <div class="stat-icon"><i class="fas fa-code"></i></div>
+                <div class="stat-info">
+                    <h4>FOCUS PROJECT</h4>
+                    <p>SIMK Rumah BUMN Jakarta</p>
+                </div>
+                <span class="stat-num">01</span>
+            </div>
+            <div class="bento-stat-card">
+                <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                <div class="stat-info">
+                    <h4>CERTIFICATION</h4>
+                    <p>System Analyst — LSP Informatika</p>
+                </div>
+                <span class="stat-num">01</span>
+            </div>
+            <div class="bento-stat-card">
+                <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="stat-info">
+                    <h4>EXPERIENCE</h4>
+                    <p>Internship, Leadership & Partnership</p>
+                </div>
+                <span class="stat-num">03</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE SECTION -->
+    <section id="experience" class="experience">
+        <div class="section-title">
+            <h2>Professional Experience</h2>
+            <p>Applied contributions and team leadership</p>
+        </div>
+
+        <div class="exp-bento-container">
+            <!-- PENGALAMAN 1: RUMAH BUMN -->
+            <div class="exp-bento-card">
+                <div class="exp-bento-text">
+                    <span class="exp-date-badge">Juli 2025 - September 2025</span>
+                    <h3>Event & Partnership Intern</h3>
+                    <h4 class="exp-company">Rumah BUMN Jakarta</h4>
+                    <ul class="exp-bullet-points">
+                        <li>Mengelola dan memperbarui database UMKM pada platform Rumah BUMN untuk mendukung administrasi dan monitoring program.</li>
+                        <li>Menganalisis kebutuhan kegiatan melalui koordinasi dengan tim dan stakeholder, lalu menerjemahkannya menjadi kebutuhan administrasi dan pelaksanaan program.</li>
+                        <li>Mengelola komunikasi dengan pelaku UMKM, narasumber, mitra, dan stakeholder melalui WhatsApp Official dan kanal koordinasi lainnya.</li>
+                        <li>Menyusun dan mengelola dokumen pendukung kegiatan, mulai dari silabus, company profile, materi publikasi, data peserta, hingga laporan.</li>
+                        <li>Berkoordinasi dengan narasumber dan mitra untuk memastikan kebutuhan program, jadwal, serta pelaksanaan kegiatan berjalan sesuai rencana.</li>
+                        <li>Mendukung proses program dari tahap perencanaan, pengelolaan data, koordinasi, dokumentasi, hingga evaluasi.</li>
+                    </ul>
+                </div>
+                <div class="exp-bento-gallery">
+                    <div class="gallery-main-thumb" onclick="openModal('images/exp-bumn-1.png')">
+                        <img src="images/exp-bumn-1.png" alt="Rumah BUMN 1">
+                    </div>
+                    <div class="gallery-sub-thumbs">
+                        <div class="sub-thumb" onclick="openModal('images/exp-bumn-2.jpeg')">
+                            <img src="images/exp-bumn-2.jpeg" alt="Rumah BUMN 2">
+                        </div>
+                        <div class="sub-thumb" onclick="openModal('images/exp-bumn-3.jpeg')">
+                            <img src="images/exp-bumn-3.jpeg" alt="Rumah BUMN 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PENGALAMAN 2: MARKETING CREW -->
+            <div class="exp-bento-card">
+                <div class="exp-bento-text">
+                    <span class="exp-date-badge">September 2024 - September 2025</span>
+                    <h3>President of Marketing Crew</h3>
+                    <h4 class="exp-company">Telkom University Campus Jakarta</h4>
+                    <ul class="exp-bullet-points">
+                        <li>Memimpin dan mengoordinasikan Promotion Team dan Digital Team dalam pelaksanaan berbagai program organisasi.</li>
+                        <li>Mengoordinasikan kebutuhan antar divisi untuk memastikan pelaksanaan kegiatan berjalan sesuai rencana dan target.</li>
+                        <li>Melakukan monitoring dan evaluasi terhadap pelaksanaan program dan kinerja tim sebagai dasar perbaikan.</li>
+                        <li>Mengelola komunikasi dan koordinasi dengan stakeholder internal maupun pihak eksternal.</li>
+                        <li>Memberikan arahan, pendampingan, dan evaluasi kepada anggota untuk mendukung kerja tim yang efektif dan kolaboratif.</li>
+                    </ul>
+                </div>
+                <div class="exp-bento-gallery">
+                    <div class="gallery-main-thumb" onclick="openModal('images/exp-telyu-1.jpeg')">
+                        <img src="images/exp-telyu-1.jpeg" alt="Marketing Crew 1">
+                    </div>
+                    <div class="gallery-sub-thumbs">
+                        <div class="sub-thumb" onclick="openModal('images/exp-telyu-2.jpeg')">
+                            <img src="images/exp-telyu-2.jpeg" alt="Marketing Crew 2">
+                        </div>
+                        <div class="sub-thumb" onclick="openModal('images/exp-telyu-3.jpg')">
+                            <img src="images/exp-telyu-3.jpg" alt="Marketing Crew 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYSTEM DIAGRAMS SECTION -->
+    <section id="diagrams" class="artifacts">
+        <div class="section-title">
+            <h2>System Analysis & Design</h2>
+            <p>System modeling artifacts developed for the SIMK Rumah BUMN project</p>
+        </div>
+
+        <div class="slider-panel-wrapper">
+            <div class="diagram-carousel-box" id="diagramCarousel">
+                <div class="diag-track">
+                    <div class="diag-item active">
+                        <div class="diag-img-container"><img src="images/bpmn.png" alt="BPMN Diagram" onclick="openModal(this.src)"></div>
+                        <div class="diag-caption">
+                            <h3>BPMN — Business Process Model and Notation</h3>
+                            <p>Memetakan proses bisnis end-to-end dan hubungan aktivitas antar aktor sebagai dasar identifikasi kebutuhan sistem.</p>
+                        </div>
+                    </div>
+                    <div class="diag-item">
+                        <div class="diag-img-container"><img src="images/usecase.jpg" alt="Use Case Diagram" onclick="openModal(this.src)"></div>
+                        <div class="diag-caption">
+                            <h3>Use Case Diagram</h3>
+                            <p>Mendefinisikan kebutuhan fungsional sistem berdasarkan interaksi Admin dan Mitra dengan sistem.</p>
+                        </div>
+                    </div>
+                    <div class="diag-item">
+                        <div class="diag-img-container"><img src="images/activity.jpg" alt="Activity Diagram" onclick="openModal(this.src)"></div>
+                        <div class="diag-caption">
+                            <h3>Activity Diagram</h3>
+                            <p>Merinci alur aktivitas pengguna dan respons sistem pada proses utama dalam SIMK.</p>
+                        </div>
+                    </div>
+                    <div class="diag-item">
+                        <div class="diag-img-container"><img src="images/sequence.jpg" alt="Sequence Diagram" onclick="openModal(this.src)"></div>
+                        <div class="diag-caption">
+                            <h3>Sequence Diagram</h3>
+                            <p>Memodelkan urutan interaksi antara pengguna, antarmuka, proses aplikasi, dan basis data.</p>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="slide-nav-btn prev" onclick="shiftDiagSlide(-1)">❮</button>
+                <button type="button" class="slide-nav-btn next" onclick="shiftDiagSlide(1)">❯</button>
+                <div class="diag-indicator-dots" id="diagDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WEB PROJECTS SHOWCASE -->
+    <section id="projects" class="projects">
+        <div class="section-title">
+            <h2>Featured Project — SIMK Rumah BUMN</h2>
+            <p>Sistem Informasi Manajemen Kemitraan | System Analyst & Developer</p>
+        </div>
+
+        <div class="slider-panel-wrapper">
+            <div class="diagram-carousel-box" id="webCarousel">
+                <div class="diag-track">
+                    <div class="web-item active">
+                        <div class="diag-img-container"><img src="images/web-simk-dashboard.jpg" alt="SIMK Dashboard" onclick="openModal(this.src)"></div>
+                        <div class="diag-caption">
+                            <div class="project-card-header">
+                                <h3>SIMK Rumah BUMN — Dashboard</h3>
+                                <span class="tag-accent">LARAVEL + MYSQL</span>
+                            </div>
+                            <p>Dashboard untuk monitoring data kemitraan yang menampilkan ringkasan data, statistik, dan aktivitas sebagai pendukung pemantauan oleh Admin.</p>
+                        </div>
+                    </div>
+                    <div class="web-item">
+                        <div class="diag-img-container"><img src="images/web-simk-mitra.jpg" alt="SIMK Data Mitra" onclick="openModal(this.src)"></div>
+                        <div class="diag-caption">
+                            <div class="project-card-header">
+                                <h3>SIMK Rumah BUMN — Data Mitra</h3>
+                                <span class="tag-accent">DATA MANAGEMENT</span>
+                            </div>
+                            <p>Modul pengelolaan data mitra dengan fungsi pencarian dan filter untuk membantu proses menemukan serta mengelola data mitra secara lebih terstruktur.</p>
+                        </div>
+                    </div>
+                    <div class="web-item">
+                        <div class="diag-img-container"><img src="images/web-simk-jadwal.jpg" alt="SIMK Penjadwalan" onclick="openModal(this.src)"></div>
+                        <div class="diag-caption">
+                            <div class="project-card-header">
+                                <h3>SIMK Rumah BUMN — Silabus & Pelatihan</h3>
+                                <span class="tag-accent">WORKFLOW</span>
+                            </div>
+                            <p>Pengelolaan informasi silabus dan kebutuhan pelatihan yang mendukung koordinasi antara Admin dan mitra.</p>
+                        </div>
+                    </div>
+                    <div class="web-item">
+                        <div class="diag-img-container"><img src="images/web-simk-laporan.jpg" alt="SIMK Laporan" onclick="openModal(this.src)"></div>
+                        <div class="diag-caption">
+                            <div class="project-card-header">
+                                <h3>SIMK Rumah BUMN — Reporting</h3>
+                                <span class="tag-accent">REPORTING</span>
+                            </div>
+                            <p>Fitur pelaporan untuk membantu Admin melihat dan merekap data kemitraan sebagai bahan monitoring dan evaluasi.</p>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="slide-nav-btn prev" onclick="shiftWebSlide(-1)">❮</button>
+                <button type="button" class="slide-nav-btn next" onclick="shiftWebSlide(1)">❯</button>
+                <div class="diag-indicator-dots" id="webDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <div class="section-title">
+            <h2>Core Competencies & Tools</h2>
+            <p>Analytical capabilities, system modeling, development, and collaboration tools</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-project-diagram"></i>
+                <h3>System & Business Analysis</h3>
+                <p>Requirements analysis, stakeholder interview, business process analysis, UML, BPMN, use case, activity, sequence, and ERD modeling.</p>
+                <div class="tool-logos">
+                    <span class="tool-badge"><i class="fas fa-cube"></i> Visual Paradigm</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Development & Database</h3>
+                <p>Laravel, PHP, MySQL, XAMPP, database management, and web application implementation using VS Code.</p>
+                <div class="tool-logos">
+                    <span class="tool-badge"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                    <span class="tool-badge"><i class="devicon-laravel-plain colored"></i> Laravel</span>
+                    <span class="tool-badge"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Stakeholder & Project Coordination</h3>
+                <p>Stakeholder management, team coordination, documentation, partnership management, and project communication.</p>
+                <div class="tool-logos">
+                    <span class="tool-badge"><i class="devicon-canva-original colored"></i> Canva</span>
+                    <span class="tool-badge"><i class="fas fa-file-excel" style="color: #107c41;"></i> Ms. Office</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="contact-box">
+            <h2>Open to Opportunities</h2>
+            <p>Saya terbuka untuk peluang di bidang System Analysis, Business Analysis, dan peran terkait pengembangan sistem informasi.</p>
+            <div class="contact-details">
+                <a href="mailto:karinasalma710@gmail.com"><i class="fas fa-envelope"></i> karinasalma710@gmail.com</a>
+                <a href="tel:+628993904840"><i class="fas fa-phone-alt"></i> +62 899-390-4840</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Karina Salma Rizkita. System & Business Analyst Portfolio.</p>
+    </footer>
+
+    <!-- IMAGE MODAL ZOOM -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
